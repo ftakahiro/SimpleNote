@@ -19,14 +19,22 @@
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"
                 android:text="@string/bt_count"
+                android:textColor="@color/colorBlack"
+                android:background="@color/colorSilver"
                 android:onClick="onCountClick"
+                android:padding="1dp"
+                android:layout_margin="1dp"
                 android:layout_gravity=""/>
             <Button
                 android:id="@+id/btSave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:layout_margin="1dp"
                 style="?android:attr/buttonBarButtonStyle"
                 android:text="@string/bt_save"
+                android:textColor="@color/colorBlack"
+                android:background="@color/colorSilver"
                 android:layout_gravity="end"
                 android:onClick="onSaveClick"/>
         </LinearLayout>

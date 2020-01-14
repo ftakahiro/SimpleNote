@@ -81,7 +81,7 @@ class InputActivity : AppCompatActivity() {
 //        }
 
         val inputTextString=inputText.text.toString()
-        val date = SimpleDateFormat("yyyy/MM/dd kk:mm:ss",Locale.getDefault()).toString()
+        val date = SimpleDateFormat("yyyy/MM/dd kk:mm:ss",Locale.JAPANESE).format(Date())
 
         val db=_helper.writableDatabase
 
