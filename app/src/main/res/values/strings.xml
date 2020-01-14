@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">simplememo</string>
+    <string name="app_name">簡易メモ</string>
+    <string name="tv_title">メモ</string>
+    <string name="edit_title">タイトル</string>
+    <string name="bt_save">保存</string>
+    <string name="dialog_title">削除</string>
+    <string name="dialog_text">本当に削除しますか？</string>
+    <string name="dialog_bt_delete">削除</string>
+    <string name="dialog_bt_cancel">キャンセル</string>
+    <string name="bkdialog_title">保存しますか？</string>
+    <string name="bkdialog_bt_save">保存</string>
+    <string name="bkdialog_bt_notsave">保存しない</string>
+    <string name="bt_count">字数カウント</string>
+    <string name="hint_text_memo">メモ</string>
 </resources>
