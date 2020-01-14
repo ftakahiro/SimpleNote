@@ -93,7 +93,6 @@ class MainActivity : AppCompatActivity() {
             val view=inflater.inflate(R.layout.row,parent,false)
             view.setOnClickListener(recyclerViewClick())
 
-
             val holder=RecyclerListViewHolder(view)
             return holder
         }
@@ -105,12 +104,13 @@ class MainActivity : AppCompatActivity() {
             val text=item["text"] as String
             val date=item["date"] as String
             val textReplaced=text.replace("\n"," ")
-            val textReplaced15string=textReplaced.substring(0,15)+"..."
+
 
             if(title == "" ){
                 if(textReplaced.length < 15){
                     holder.tvTitle.text=textReplaced
                 }else{
+                    val textReplaced15string=textReplaced.substring(0,15)+"..."
                     holder.tvTitle.text=textReplaced15string
                 }
             }else{
