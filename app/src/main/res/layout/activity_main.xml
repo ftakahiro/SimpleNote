@@ -1,81 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:id="@+id/layoutCordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/layoutCordinator"
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="?attr/colorPrimary"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lvMenu"
+        android:layout_width="match_parent"
+        android:layout_height="680dp"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="bottom"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_scrollFlags="scroll|enterAlways"
-                android:background="?attr/colorPrimary"/>
-        </com.google.android.material.appbar.AppBarLayout>
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/lvMenu"
-            android:layout_width="match_parent"
-            android:layout_height="680dp"
-            android:scrollbars="vertical"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
-
         <LinearLayout
-            android:orientation="vertical"
-            android:gravity="bottom"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <!-- linearLayour for fab button-->
             <LinearLayout
+                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-                <!-- linearLayour for fab button-->
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="end">
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/addButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_mode_edit_white_24dp"
-                        app:layout_anchor="@id/lvMenu"
-                        app:layout_anchorGravity="bottom|right|end"
-                        android:layout_margin="16dp"/>
-                </LinearLayout>
-
-                <!-- LinearLayour for AdView-->
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <com.google.android.gms.ads.AdView
-                        xmlns:ads="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/adView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        ads:adSize="BANNER"
-                        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
-                        <!--    test adUnitId   ca-app-pub-3940256099942544/6300978111-->
-                    </com.google.android.gms.ads.AdView>
-                </LinearLayout>
-
+                android:layout_height="match_parent"
+                android:gravity="end">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/addButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_mode_edit_white_24dp"
+                    app:layout_anchor="@id/lvMenu"
+                    app:layout_anchorGravity="bottom|right|end"
+                    android:layout_margin="16dp"/>
             </LinearLayout>
+
+            <!-- LinearLayout for AdView-->
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+                    <!--    test adUnitId   ca-app-pub-3940256099942544/6300978111-->
+                </com.google.android.gms.ads.AdView>
+            </RelativeLayout>
+
         </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-</RelativeLayout>
